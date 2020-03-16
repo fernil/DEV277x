@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class BusinessLead extends BusinessEmployee {
 	private int headCount;
 
-	private ArrayList<Accountant> directReports;
+	private ArrayList<Accountant> directReports= new ArrayList<>();
 
 	public BusinessLead(String name) {
 		super(name);
 		baseSalary *= 2;
 		this.headCount = 10;
-		this.directReports = null;
+		
 	}
 
 	public boolean hasHeadCount() {
@@ -22,9 +22,9 @@ public class BusinessLead extends BusinessEmployee {
 	}
 
 	public boolean addReport(Accountant e, TechnicalLead supportTeam) {
-		if (headCount > 0) {
+		if (hasHeadCount()) {
 			directReports.add(e);
-			headCount--;
+			
 			bonusBudget += e.getBaseSalary() * 1.1;
 			e.manager = this;
 			e.supportTeam(supportTeam);

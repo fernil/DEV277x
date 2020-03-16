@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class TechnicalLead extends TechnicalEmployee {
 	 int headCount=4;
 	private int reportsCount;
-	 ArrayList<SoftwareEngineer> directReports;
+	 ArrayList<SoftwareEngineer> directReports= new ArrayList<>();;
 
 
 	public TechnicalLead(String name) {
@@ -24,9 +24,9 @@ public class TechnicalLead extends TechnicalEmployee {
 	}
 
 	public boolean addReport(SoftwareEngineer e) {
-		if (headCount > 0) {
+		if (hasHeadCount()) {
 			directReports.add(e);
-			headCount--;
+			
 			return true;
 		}
 		return false;

@@ -13,7 +13,7 @@ abstract class BusinessEmployee extends Employee{
 		return bonusBudget;
 	}
 	public String employeeStatus() {
-		return this.getEmployeeID()+" "+this.getName()+" with a budget of "+this.bonusBudget;
+		return this.getEmployeeID()+" "+this.getName()+" with a budget of "+ (int)this.bonusBudget;
 	}
 	abstract Employee getManager();
 }

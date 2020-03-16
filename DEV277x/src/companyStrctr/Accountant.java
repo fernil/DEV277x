@@ -32,7 +32,7 @@ public class Accountant extends BusinessEmployee {
 	}
 
 	public String employeeStatus() {
-		return this.getEmployeeID() + " " + this.getName() + " with a budget of " + budget + " is supporting "
+		return this.getEmployeeID() + " " + this.getName() + " with a budget of " + (int)budget + " is supporting "
 				+ teamSupported;
 	}
 

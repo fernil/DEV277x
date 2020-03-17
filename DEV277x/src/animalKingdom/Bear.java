@@ -1,6 +1,7 @@
 package animalKingdom;
 
 import java.awt.Color;
+import java.util.Random;
 
 public class Bear extends Critter {
 	private boolean polar;
@@ -9,6 +10,10 @@ public class Bear extends Critter {
 
 	public Bear() {
 		move = "/";
+		Random random=new Random();
+		if(random.nextInt(2)==1) {
+			polar=true;
+		}
 	}
 
 	public Bear(boolean polar) {
@@ -21,6 +26,7 @@ public class Bear extends Critter {
 	}
 
 	public Color getColor() {
+		
 		if (polar) {
 			return Color.WHITE;
 		}
